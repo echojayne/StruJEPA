@@ -1,0 +1,225 @@
+/home/users/dky/.local/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+loaded split=train dataset=D1 shape=(9000, 2, 24, 4, 128)
+loaded split=train dataset=D2 shape=(9000, 2, 24, 8, 128)
+loaded split=train dataset=D3 shape=(9000, 2, 16, 8, 64)
+loaded split=train dataset=D4 shape=(9000, 2, 16, 32, 32)
+loaded split=train dataset=D5 shape=(9000, 2, 24, 4, 64)
+loaded split=train dataset=D6 shape=(9000, 2, 24, 8, 128)
+loaded split=train dataset=D7 shape=(9000, 2, 16, 32, 32)
+loaded split=train dataset=D8 shape=(9000, 2, 16, 16, 64)
+loaded split=train dataset=D9 shape=(9000, 2, 24, 4, 128)
+loaded split=train dataset=D10 shape=(9000, 2, 24, 8, 64)
+loaded split=train dataset=D11 shape=(9000, 2, 16, 16, 64)
+loaded split=train dataset=D12 shape=(9000, 2, 16, 32, 32)
+loaded split=train dataset=D13 shape=(9000, 2, 24, 16, 64)
+loaded split=train dataset=D14 shape=(9000, 2, 24, 8, 128)
+loaded split=train dataset=D15 shape=(9000, 2, 16, 16, 64)
+loaded split=train dataset=D16 shape=(9000, 2, 16, 32, 32)
+loaded split=val dataset=D1 shape=(2000, 2, 24, 4, 128)
+loaded split=val dataset=D2 shape=(2000, 2, 24, 8, 128)
+loaded split=val dataset=D3 shape=(2000, 2, 16, 8, 64)
+loaded split=val dataset=D4 shape=(2000, 2, 16, 32, 32)
+loaded split=val dataset=D5 shape=(2000, 2, 24, 4, 64)
+loaded split=val dataset=D6 shape=(2000, 2, 24, 8, 128)
+loaded split=val dataset=D7 shape=(2000, 2, 16, 32, 32)
+loaded split=val dataset=D8 shape=(2000, 2, 16, 16, 64)
+loaded split=val dataset=D9 shape=(2000, 2, 24, 4, 128)
+loaded split=val dataset=D10 shape=(2000, 2, 24, 8, 64)
+loaded split=val dataset=D11 shape=(2000, 2, 16, 16, 64)
+loaded split=val dataset=D12 shape=(2000, 2, 16, 32, 32)
+loaded split=val dataset=D13 shape=(2000, 2, 24, 16, 64)
+loaded split=val dataset=D14 shape=(2000, 2, 24, 8, 128)
+loaded split=val dataset=D15 shape=(2000, 2, 16, 16, 64)
+loaded split=val dataset=D16 shape=(2000, 2, 16, 32, 32)
+/home/users/dky/StruJEPA/WIFO/src/strujepa_main.py:129: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(args.file_load_path, map_location="cpu")
+model initialized!
+width_multipliers=(1.0, 0.5, 0.125)
+depth_multipliers=(1.0, 0.5, 0.166667)
+{"event": "train_progress", "epoch": 1, "batch": 500, "batches_per_rank": 18000, "loss": 0.21784961969653768, "sampled_subnets": 6.0, "full_nmse": 0.029872840582703543}
+{"event": "train_progress", "epoch": 1, "batch": 1000, "batches_per_rank": 18000, "loss": 0.16649562238032617, "sampled_subnets": 6.0, "full_nmse": 0.028973919572619095}
+{"event": "train_progress", "epoch": 1, "batch": 1500, "batches_per_rank": 18000, "loss": 0.3586456732120776, "sampled_subnets": 6.0, "full_nmse": 0.11057717993441561}
+{"event": "train_progress", "epoch": 1, "batch": 2000, "batches_per_rank": 18000, "loss": 0.48102524208774156, "sampled_subnets": 6.0, "full_nmse": 0.16863810562156153}
+{"event": "train_progress", "epoch": 1, "batch": 2500, "batches_per_rank": 18000, "loss": 0.5465046795904644, "sampled_subnets": 6.0, "full_nmse": 0.2017533430561424}
+{"event": "train_progress", "epoch": 1, "batch": 3000, "batches_per_rank": 18000, "loss": 0.5823851147277497, "sampled_subnets": 6.0, "full_nmse": 0.22159144190905813}
+{"event": "train_progress", "epoch": 1, "batch": 3500, "batches_per_rank": 18000, "loss": 0.5900911654908044, "sampled_subnets": 6.0, "full_nmse": 0.22793659191809232}
+{"event": "train_progress", "epoch": 1, "batch": 4000, "batches_per_rank": 18000, "loss": 0.5481856303612392, "sampled_subnets": 6.0, "full_nmse": 0.2112107079015113}
+{"event": "train_progress", "epoch": 1, "batch": 4500, "batches_per_rank": 18000, "loss": 0.5131749013916209, "sampled_subnets": 6.0, "full_nmse": 0.19783083975935978}
+{"event": "train_progress", "epoch": 1, "batch": 5000, "batches_per_rank": 18000, "loss": 0.528855556144317, "sampled_subnets": 6.0, "full_nmse": 0.20282616201005896}
+{"event": "train_progress", "epoch": 1, "batch": 5500, "batches_per_rank": 18000, "loss": 0.5353920862042552, "sampled_subnets": 6.0, "full_nmse": 0.20573717158095853}
+{"event": "train_progress", "epoch": 1, "batch": 6000, "batches_per_rank": 18000, "loss": 0.5287851918227974, "sampled_subnets": 6.0, "full_nmse": 0.204408641913595}
+{"event": "train_progress", "epoch": 1, "batch": 6500, "batches_per_rank": 18000, "loss": 0.5173092526640641, "sampled_subnets": 6.0, "full_nmse": 0.20161066674507902}
+{"event": "train_progress", "epoch": 1, "batch": 7000, "batches_per_rank": 18000, "loss": 0.5284519634264562, "sampled_subnets": 6.0, "full_nmse": 0.20808511880031258}
+{"event": "train_progress", "epoch": 1, "batch": 7500, "batches_per_rank": 18000, "loss": 0.5527328960806124, "sampled_subnets": 6.0, "full_nmse": 0.22067141852701633}
+{"event": "train_progress", "epoch": 1, "batch": 8000, "batches_per_rank": 18000, "loss": 0.5666785721434269, "sampled_subnets": 6.0, "full_nmse": 0.22811946014865853}
+{"event": "train_progress", "epoch": 1, "batch": 8500, "batches_per_rank": 18000, "loss": 0.563080245871461, "sampled_subnets": 6.0, "full_nmse": 0.22658848392123326}
+{"event": "train_progress", "epoch": 1, "batch": 9000, "batches_per_rank": 18000, "loss": 0.5582193718911325, "sampled_subnets": 6.0, "full_nmse": 0.22463864912485856}
+{"event": "train_progress", "epoch": 1, "batch": 9500, "batches_per_rank": 18000, "loss": 0.5604657774646029, "sampled_subnets": 6.0, "full_nmse": 0.2266321256788802}
+{"event": "train_progress", "epoch": 1, "batch": 10000, "batches_per_rank": 18000, "loss": 0.5611612027312323, "sampled_subnets": 6.0, "full_nmse": 0.22815535818121033}
+{"event": "train_progress", "epoch": 1, "batch": 10500, "batches_per_rank": 18000, "loss": 0.5493633914122741, "sampled_subnets": 6.0, "full_nmse": 0.22362313703412084}
+{"event": "train_progress", "epoch": 1, "batch": 11000, "batches_per_rank": 18000, "loss": 0.5339700373011558, "sampled_subnets": 6.0, "full_nmse": 0.21745046203747093}
+{"event": "train_progress", "epoch": 1, "batch": 11500, "batches_per_rank": 18000, "loss": 0.5225401241346331, "sampled_subnets": 6.0, "full_nmse": 0.2129322091103463}
+{"event": "train_progress", "epoch": 1, "batch": 12000, "batches_per_rank": 18000, "loss": 0.5137481430785529, "sampled_subnets": 6.0, "full_nmse": 0.20968368956218988}
+{"event": "train_progress", "epoch": 1, "batch": 12500, "batches_per_rank": 18000, "loss": 0.5029261248506117, "sampled_subnets": 6.0, "full_nmse": 0.2055224622957412}
+{"event": "train_progress", "epoch": 1, "batch": 13000, "batches_per_rank": 18000, "loss": 0.48528033531146825, "sampled_subnets": 6.0, "full_nmse": 0.19835837900397446}
+{"event": "train_progress", "epoch": 1, "batch": 13500, "batches_per_rank": 18000, "loss": 0.4687875391322161, "sampled_subnets": 6.0, "full_nmse": 0.19169386947240133}
+{"event": "train_progress", "epoch": 1, "batch": 14000, "batches_per_rank": 18000, "loss": 0.47156131862618533, "sampled_subnets": 6.0, "full_nmse": 0.19319537605281006}
+{"event": "train_progress", "epoch": 1, "batch": 14500, "batches_per_rank": 18000, "loss": 0.4723007788796892, "sampled_subnets": 6.0, "full_nmse": 0.1940813591861569}
+{"event": "train_progress", "epoch": 1, "batch": 15000, "batches_per_rank": 18000, "loss": 0.46212825337756147, "sampled_subnets": 6.0, "full_nmse": 0.190023198638112}
+{"event": "train_progress", "epoch": 1, "batch": 15500, "batches_per_rank": 18000, "loss": 0.44893433539721683, "sampled_subnets": 6.0, "full_nmse": 0.18464554432907818}
+{"event": "train_progress", "epoch": 1, "batch": 16000, "batches_per_rank": 18000, "loss": 0.4369670105365031, "sampled_subnets": 6.0, "full_nmse": 0.1798047123649358}
+{"event": "train_progress", "epoch": 1, "batch": 16500, "batches_per_rank": 18000, "loss": 0.42598003774493765, "sampled_subnets": 6.0, "full_nmse": 0.17541390536206297}
+{"event": "train_progress", "epoch": 1, "batch": 17000, "batches_per_rank": 18000, "loss": 0.42002414267718424, "sampled_subnets": 6.0, "full_nmse": 0.17314791691613718}
+{"event": "train_progress", "epoch": 1, "batch": 17500, "batches_per_rank": 18000, "loss": 0.42618019503372817, "sampled_subnets": 6.0, "full_nmse": 0.1761372063737895}
+{"event": "train_progress", "epoch": 1, "batch": 18000, "batches_per_rank": 18000, "loss": 0.43074845078949775, "sampled_subnets": 6.0, "full_nmse": 0.17849253314281632}
+{"event": "train_progress", "epoch": 2, "batch": 500, "batches_per_rank": 18000, "loss": 0.38205779987076943, "sampled_subnets": 6.0, "full_nmse": 0.1765118832935889}
+{"event": "train_progress", "epoch": 2, "batch": 1000, "batches_per_rank": 18000, "loss": 0.36791001987705657, "sampled_subnets": 6.0, "full_nmse": 0.17101679558803645}
+{"event": "train_progress", "epoch": 2, "batch": 1500, "batches_per_rank": 18000, "loss": 0.49462358920276284, "sampled_subnets": 6.0, "full_nmse": 0.22932844139056044}
+{"event": "train_progress", "epoch": 2, "batch": 2000, "batches_per_rank": 18000, "loss": 0.5784678790407887, "sampled_subnets": 6.0, "full_nmse": 0.2683913980865228}
+{"event": "train_progress", "epoch": 2, "batch": 2500, "batches_per_rank": 18000, "loss": 0.5959032389571277, "sampled_subnets": 6.0, "full_nmse": 0.2753606658399103}
+{"event": "train_progress", "epoch": 2, "batch": 3000, "batches_per_rank": 18000, "loss": 0.5767134251917403, "sampled_subnets": 6.0, "full_nmse": 0.2644751158077267}
+{"event": "train_progress", "epoch": 2, "batch": 3500, "batches_per_rank": 18000, "loss": 0.5622048990272348, "sampled_subnets": 6.0, "full_nmse": 0.25632733054707435}
+{"event": "train_progress", "epoch": 2, "batch": 4000, "batches_per_rank": 18000, "loss": 0.5506525337056574, "sampled_subnets": 6.0, "full_nmse": 0.24890378772995114}
+{"event": "train_progress", "epoch": 2, "batch": 4500, "batches_per_rank": 18000, "loss": 0.539673887208656, "sampled_subnets": 6.0, "full_nmse": 0.24256688236114063}
+{"event": "train_progress", "epoch": 2, "batch": 5000, "batches_per_rank": 18000, "loss": 0.5581340157240626, "sampled_subnets": 6.0, "full_nmse": 0.25226266917064766}
+{"event": "train_progress", "epoch": 2, "batch": 5500, "batches_per_rank": 18000, "loss": 0.5724889693955574, "sampled_subnets": 6.0, "full_nmse": 0.2601778753858168}
+{"event": "train_progress", "epoch": 2, "batch": 6000, "batches_per_rank": 18000, "loss": 0.5446857684542319, "sampled_subnets": 6.0, "full_nmse": 0.2477623513389583}
+{"event": "train_progress", "epoch": 2, "batch": 6500, "batches_per_rank": 18000, "loss": 0.5086655795230307, "sampled_subnets": 6.0, "full_nmse": 0.2314139100417779}
+{"event": "train_progress", "epoch": 2, "batch": 7000, "batches_per_rank": 18000, "loss": 0.4944228498399075, "sampled_subnets": 6.0, "full_nmse": 0.2246082606956892}
+{"event": "train_progress", "epoch": 2, "batch": 7500, "batches_per_rank": 18000, "loss": 0.4965291237542197, "sampled_subnets": 6.0, "full_nmse": 0.22527621609262266}
+{"event": "train_progress", "epoch": 2, "batch": 8000, "batches_per_rank": 18000, "loss": 0.4905206005831715, "sampled_subnets": 6.0, "full_nmse": 0.22235220632026884}
+{"event": "train_progress", "epoch": 2, "batch": 8500, "batches_per_rank": 18000, "loss": 0.46489032836514077, "sampled_subnets": 6.0, "full_nmse": 0.21068220619926695}
+{"event": "train_progress", "epoch": 2, "batch": 9000, "batches_per_rank": 18000, "loss": 0.44185783387893046, "sampled_subnets": 6.0, "full_nmse": 0.20024142367889486}
+{"event": "train_progress", "epoch": 2, "batch": 9500, "batches_per_rank": 18000, "loss": 0.4219067168352761, "sampled_subnets": 6.0, "full_nmse": 0.19118757766622463}
+{"event": "train_progress", "epoch": 2, "batch": 10000, "batches_per_rank": 18000, "loss": 0.4037167706528055, "sampled_subnets": 6.0, "full_nmse": 0.18297507068011917}
+{"event": "train_progress", "epoch": 2, "batch": 10500, "batches_per_rank": 18000, "loss": 0.406725188943897, "sampled_subnets": 6.0, "full_nmse": 0.1843351893745778}
+{"event": "train_progress", "epoch": 2, "batch": 11000, "batches_per_rank": 18000, "loss": 0.4140557188146149, "sampled_subnets": 6.0, "full_nmse": 0.18790878264507233}
+{"event": "train_progress", "epoch": 2, "batch": 11500, "batches_per_rank": 18000, "loss": 0.40896990128703675, "sampled_subnets": 6.0, "full_nmse": 0.18570376591619253}
+{"event": "train_progress", "epoch": 2, "batch": 12000, "batches_per_rank": 18000, "loss": 0.39347665692115563, "sampled_subnets": 6.0, "full_nmse": 0.17870355008273497}
+{"event": "train_progress", "epoch": 2, "batch": 12500, "batches_per_rank": 18000, "loss": 0.3859954883877928, "sampled_subnets": 6.0, "full_nmse": 0.17544382372501008}
+{"event": "train_progress", "epoch": 2, "batch": 13000, "batches_per_rank": 18000, "loss": 0.39748635755598705, "sampled_subnets": 6.0, "full_nmse": 0.1813494616909529}
+{"event": "train_progress", "epoch": 2, "batch": 13500, "batches_per_rank": 18000, "loss": 0.4071736646445902, "sampled_subnets": 6.0, "full_nmse": 0.1863924679460215}
+{"event": "train_progress", "epoch": 2, "batch": 14000, "batches_per_rank": 18000, "loss": 0.4139281437181028, "sampled_subnets": 6.0, "full_nmse": 0.18922776322698778}
+{"event": "train_progress", "epoch": 2, "batch": 14500, "batches_per_rank": 18000, "loss": 0.41919007796378915, "sampled_subnets": 6.0, "full_nmse": 0.19152308092491147}
+{"event": "train_progress", "epoch": 2, "batch": 15000, "batches_per_rank": 18000, "loss": 0.41543191096356374, "sampled_subnets": 6.0, "full_nmse": 0.18963688837858964}
+{"event": "train_progress", "epoch": 2, "batch": 15500, "batches_per_rank": 18000, "loss": 0.40869639801646646, "sampled_subnets": 6.0, "full_nmse": 0.18648148993813324}
+{"event": "train_progress", "epoch": 2, "batch": 16000, "batches_per_rank": 18000, "loss": 0.402357055218387, "sampled_subnets": 6.0, "full_nmse": 0.1834620286726281}
+{"event": "train_progress", "epoch": 2, "batch": 16500, "batches_per_rank": 18000, "loss": 0.39620778328470174, "sampled_subnets": 6.0, "full_nmse": 0.1805489867244749}
+{"event": "train_progress", "epoch": 2, "batch": 17000, "batches_per_rank": 18000, "loss": 0.3911939419531731, "sampled_subnets": 6.0, "full_nmse": 0.1781781649459706}
+{"event": "train_progress", "epoch": 2, "batch": 17500, "batches_per_rank": 18000, "loss": 0.3886121596424718, "sampled_subnets": 6.0, "full_nmse": 0.1769585263703024}
+{"event": "train_progress", "epoch": 2, "batch": 18000, "batches_per_rank": 18000, "loss": 0.3859143398005737, "sampled_subnets": 6.0, "full_nmse": 0.17572078050909343}
+{"event": "train_progress", "epoch": 3, "batch": 500, "batches_per_rank": 18000, "loss": 0.19286618573466918, "sampled_subnets": 6.0, "full_nmse": 0.08440682096779349}
+{"event": "train_progress", "epoch": 3, "batch": 1000, "batches_per_rank": 18000, "loss": 0.18882640835021935, "sampled_subnets": 6.0, "full_nmse": 0.08319939581739405}
+{"event": "train_progress", "epoch": 3, "batch": 1500, "batches_per_rank": 18000, "loss": 0.35245779268278027, "sampled_subnets": 6.0, "full_nmse": 0.1617852235101163}
+{"event": "train_progress", "epoch": 3, "batch": 2000, "batches_per_rank": 18000, "loss": 0.46465635310858505, "sampled_subnets": 6.0, "full_nmse": 0.21687436797438817}
+{"event": "train_progress", "epoch": 3, "batch": 2500, "batches_per_rank": 18000, "loss": 0.45910225275705197, "sampled_subnets": 6.0, "full_nmse": 0.2151652048118409}
+{"event": "train_progress", "epoch": 3, "batch": 3000, "batches_per_rank": 18000, "loss": 0.3952420754778296, "sampled_subnets": 6.0, "full_nmse": 0.18516722660315107}
+{"event": "train_progress", "epoch": 3, "batch": 3500, "batches_per_rank": 18000, "loss": 0.3716122841446523, "sampled_subnets": 6.0, "full_nmse": 0.17434099098011127}
+{"event": "train_progress", "epoch": 3, "batch": 4000, "batches_per_rank": 18000, "loss": 0.40855285145916587, "sampled_subnets": 6.0, "full_nmse": 0.19293366368518486}
+{"event": "train_progress", "epoch": 3, "batch": 4500, "batches_per_rank": 18000, "loss": 0.4353206678779309, "sampled_subnets": 6.0, "full_nmse": 0.20642449413488273}
+{"event": "train_progress", "epoch": 3, "batch": 5000, "batches_per_rank": 18000, "loss": 0.4474868769930051, "sampled_subnets": 6.0, "full_nmse": 0.21031226383323443}
+{"event": "train_progress", "epoch": 3, "batch": 5500, "batches_per_rank": 18000, "loss": 0.45422249951834487, "sampled_subnets": 6.0, "full_nmse": 0.2123260178279241}
+{"event": "train_progress", "epoch": 3, "batch": 6000, "batches_per_rank": 18000, "loss": 0.43986368972425216, "sampled_subnets": 6.0, "full_nmse": 0.20504874039689644}
+{"event": "train_progress", "epoch": 3, "batch": 6500, "batches_per_rank": 18000, "loss": 0.42146226045460683, "sampled_subnets": 6.0, "full_nmse": 0.19622841961920562}
+{"event": "train_progress", "epoch": 3, "batch": 7000, "batches_per_rank": 18000, "loss": 0.41967799978321946, "sampled_subnets": 6.0, "full_nmse": 0.1948396282560583}
+{"event": "train_progress", "epoch": 3, "batch": 7500, "batches_per_rank": 18000, "loss": 0.43034702785420864, "sampled_subnets": 6.0, "full_nmse": 0.19907945542873504}
+{"event": "train_progress", "epoch": 3, "batch": 8000, "batches_per_rank": 18000, "loss": 0.436227476777898, "sampled_subnets": 6.0, "full_nmse": 0.20154740440713437}
+{"event": "train_progress", "epoch": 3, "batch": 8500, "batches_per_rank": 18000, "loss": 0.431869718432501, "sampled_subnets": 6.0, "full_nmse": 0.1998051049865624}
+{"event": "train_progress", "epoch": 3, "batch": 9000, "batches_per_rank": 18000, "loss": 0.4270913643098139, "sampled_subnets": 6.0, "full_nmse": 0.19797750706984368}
+{"event": "train_progress", "epoch": 3, "batch": 9500, "batches_per_rank": 18000, "loss": 0.4078869762025272, "sampled_subnets": 6.0, "full_nmse": 0.1890401392204907}
+{"event": "train_progress", "epoch": 3, "batch": 10000, "batches_per_rank": 18000, "loss": 0.39037448224884963, "sampled_subnets": 6.0, "full_nmse": 0.18093659365468867}
+{"event": "train_progress", "epoch": 3, "batch": 10500, "batches_per_rank": 18000, "loss": 0.3890324203143182, "sampled_subnets": 6.0, "full_nmse": 0.17997229346532329}
+{"event": "train_progress", "epoch": 3, "batch": 11000, "batches_per_rank": 18000, "loss": 0.3911656963498434, "sampled_subnets": 6.0, "full_nmse": 0.1806025798955752}
+{"event": "train_progress", "epoch": 3, "batch": 11500, "batches_per_rank": 18000, "loss": 0.3957302193981272, "sampled_subnets": 6.0, "full_nmse": 0.18260809156638697}
+{"event": "train_progress", "epoch": 3, "batch": 12000, "batches_per_rank": 18000, "loss": 0.40221012617673685, "sampled_subnets": 6.0, "full_nmse": 0.18575541463013037}
+{"event": "train_progress", "epoch": 3, "batch": 12500, "batches_per_rank": 18000, "loss": 0.40282279805004734, "sampled_subnets": 6.0, "full_nmse": 0.18619533302520627}
+{"event": "train_progress", "epoch": 3, "batch": 13000, "batches_per_rank": 18000, "loss": 0.3888699821591957, "sampled_subnets": 6.0, "full_nmse": 0.17975197021581943}
+{"event": "train_progress", "epoch": 3, "batch": 13500, "batches_per_rank": 18000, "loss": 0.37583592803909716, "sampled_subnets": 6.0, "full_nmse": 0.1737600575605699}
+{"event": "train_progress", "epoch": 3, "batch": 14000, "batches_per_rank": 18000, "loss": 0.3733391588969337, "sampled_subnets": 6.0, "full_nmse": 0.17248015557293764}
+{"event": "train_progress", "epoch": 3, "batch": 14500, "batches_per_rank": 18000, "loss": 0.3704213045309241, "sampled_subnets": 6.0, "full_nmse": 0.17110925976338937}
+{"event": "train_progress", "epoch": 3, "batch": 15000, "batches_per_rank": 18000, "loss": 0.3733995007473139, "sampled_subnets": 6.0, "full_nmse": 0.17237080189244122}
+{"event": "train_progress", "epoch": 3, "batch": 15500, "batches_per_rank": 18000, "loss": 0.3765874109794931, "sampled_subnets": 6.0, "full_nmse": 0.17388578281289127}
+{"event": "train_progress", "epoch": 3, "batch": 16000, "batches_per_rank": 18000, "loss": 0.3730539917215935, "sampled_subnets": 6.0, "full_nmse": 0.17227337866095963}
+{"event": "train_progress", "epoch": 3, "batch": 16500, "batches_per_rank": 18000, "loss": 0.3632810607014804, "sampled_subnets": 6.0, "full_nmse": 0.16775803754437218}
+{"event": "train_progress", "epoch": 3, "batch": 17000, "batches_per_rank": 18000, "loss": 0.3594166434049312, "sampled_subnets": 6.0, "full_nmse": 0.16605008583780628}
+{"event": "train_progress", "epoch": 3, "batch": 17500, "batches_per_rank": 18000, "loss": 0.3695448155171816, "sampled_subnets": 6.0, "full_nmse": 0.17119704624288437}
+{"event": "train_progress", "epoch": 3, "batch": 18000, "batches_per_rank": 18000, "loss": 0.37867300348052835, "sampled_subnets": 6.0, "full_nmse": 0.17587632841535727}
+{"event": "train_progress", "epoch": 4, "batch": 500, "batches_per_rank": 18000, "loss": 0.06520642953862747, "sampled_subnets": 6.0, "full_nmse": 0.029174700396756337}
+{"event": "train_progress", "epoch": 4, "batch": 1000, "batches_per_rank": 18000, "loss": 0.061450356518849725, "sampled_subnets": 6.0, "full_nmse": 0.028072822933085263}
+{"event": "train_progress", "epoch": 4, "batch": 1500, "batches_per_rank": 18000, "loss": 0.0950154652661747, "sampled_subnets": 6.0, "full_nmse": 0.04308172322975265}
+{"event": "train_progress", "epoch": 4, "batch": 2000, "batches_per_rank": 18000, "loss": 0.11803252803596342, "sampled_subnets": 6.0, "full_nmse": 0.053429570072330554}
+{"event": "train_progress", "epoch": 4, "batch": 2500, "batches_per_rank": 18000, "loss": 0.1617323204909761, "sampled_subnets": 6.0, "full_nmse": 0.07315301165779438}
+{"event": "train_progress", "epoch": 4, "batch": 3000, "batches_per_rank": 18000, "loss": 0.21241888028590195, "sampled_subnets": 6.0, "full_nmse": 0.09657799231302423}
+{"event": "train_progress", "epoch": 4, "batch": 3500, "batches_per_rank": 18000, "loss": 0.2570113085675093, "sampled_subnets": 6.0, "full_nmse": 0.11758457049053353}
+{"event": "train_progress", "epoch": 4, "batch": 4000, "batches_per_rank": 18000, "loss": 0.31275936377017427, "sampled_subnets": 6.0, "full_nmse": 0.14513777384193008}
+{"event": "train_progress", "epoch": 4, "batch": 4500, "batches_per_rank": 18000, "loss": 0.35389112801215145, "sampled_subnets": 6.0, "full_nmse": 0.1659487432939586}
+{"event": "train_progress", "epoch": 4, "batch": 5000, "batches_per_rank": 18000, "loss": 0.3703715110652147, "sampled_subnets": 6.0, "full_nmse": 0.1728465975031256}
+{"event": "train_progress", "epoch": 4, "batch": 5500, "batches_per_rank": 18000, "loss": 0.3816239181483778, "sampled_subnets": 6.0, "full_nmse": 0.17759772129469745}
+{"event": "train_progress", "epoch": 4, "batch": 6000, "batches_per_rank": 18000, "loss": 0.38774599024384376, "sampled_subnets": 6.0, "full_nmse": 0.1799332295391295}
+{"event": "train_progress", "epoch": 4, "batch": 6500, "batches_per_rank": 18000, "loss": 0.39076098893563715, "sampled_subnets": 6.0, "full_nmse": 0.18076522663923378}
+{"event": "train_progress", "epoch": 4, "batch": 7000, "batches_per_rank": 18000, "loss": 0.3987650350092775, "sampled_subnets": 6.0, "full_nmse": 0.18388939373301563}
+{"event": "train_progress", "epoch": 4, "batch": 7500, "batches_per_rank": 18000, "loss": 0.40989325124571735, "sampled_subnets": 6.0, "full_nmse": 0.1889780293234515}
+{"event": "train_progress", "epoch": 4, "batch": 8000, "batches_per_rank": 18000, "loss": 0.42373827433694816, "sampled_subnets": 6.0, "full_nmse": 0.1954735007851068}
+{"event": "train_progress", "epoch": 4, "batch": 8500, "batches_per_rank": 18000, "loss": 0.44741512003584893, "sampled_subnets": 6.0, "full_nmse": 0.207347706783051}
+{"event": "train_progress", "epoch": 4, "batch": 9000, "batches_per_rank": 18000, "loss": 0.46648690149505506, "sampled_subnets": 6.0, "full_nmse": 0.21707055741106973}
+{"event": "train_progress", "epoch": 4, "batch": 9500, "batches_per_rank": 18000, "loss": 0.44439130644735697, "sampled_subnets": 6.0, "full_nmse": 0.2067367193717506}
+{"event": "train_progress", "epoch": 4, "batch": 10000, "batches_per_rank": 18000, "loss": 0.4240893156332296, "sampled_subnets": 6.0, "full_nmse": 0.19732123945315022}
+{"event": "train_progress", "epoch": 4, "batch": 10500, "batches_per_rank": 18000, "loss": 0.41523235025570343, "sampled_subnets": 6.0, "full_nmse": 0.1930601676225304}
+{"event": "train_progress", "epoch": 4, "batch": 11000, "batches_per_rank": 18000, "loss": 0.4096300051683617, "sampled_subnets": 6.0, "full_nmse": 0.19041931604351248}
+{"event": "train_progress", "epoch": 4, "batch": 11500, "batches_per_rank": 18000, "loss": 0.4127813528769151, "sampled_subnets": 6.0, "full_nmse": 0.19222339442150907}
+{"event": "train_progress", "epoch": 4, "batch": 12000, "batches_per_rank": 18000, "loss": 0.42289041216769746, "sampled_subnets": 6.0, "full_nmse": 0.1976207070588126}
+{"event": "train_progress", "epoch": 4, "batch": 12500, "batches_per_rank": 18000, "loss": 0.4262585964595779, "sampled_subnets": 6.0, "full_nmse": 0.19970239274926418}
+{"event": "train_progress", "epoch": 4, "batch": 13000, "batches_per_rank": 18000, "loss": 0.4128070244290987, "sampled_subnets": 6.0, "full_nmse": 0.19340471753602143}
+{"event": "train_progress", "epoch": 4, "batch": 13500, "batches_per_rank": 18000, "loss": 0.40014407052532025, "sampled_subnets": 6.0, "full_nmse": 0.1875094586822119}
+{"event": "train_progress", "epoch": 4, "batch": 14000, "batches_per_rank": 18000, "loss": 0.3929422487835618, "sampled_subnets": 6.0, "full_nmse": 0.18407547442422084}
+{"event": "train_progress", "epoch": 4, "batch": 14500, "batches_per_rank": 18000, "loss": 0.3856288781112129, "sampled_subnets": 6.0, "full_nmse": 0.1806250965255466}
+{"event": "train_progress", "epoch": 4, "batch": 15000, "batches_per_rank": 18000, "loss": 0.38840588674255677, "sampled_subnets": 6.0, "full_nmse": 0.181984171593499}
+{"event": "train_progress", "epoch": 4, "batch": 15500, "batches_per_rank": 18000, "loss": 0.3931688027014186, "sampled_subnets": 6.0, "full_nmse": 0.18440171741427802}
+{"event": "train_progress", "epoch": 4, "batch": 16000, "batches_per_rank": 18000, "loss": 0.39012774101776787, "sampled_subnets": 6.0, "full_nmse": 0.18302027267840473}
+{"event": "train_progress", "epoch": 4, "batch": 16500, "batches_per_rank": 18000, "loss": 0.37982512013761033, "sampled_subnets": 6.0, "full_nmse": 0.1781777954601091}
+{"event": "train_progress", "epoch": 4, "batch": 17000, "batches_per_rank": 18000, "loss": 0.37246358849513705, "sampled_subnets": 6.0, "full_nmse": 0.17476048979115721}
+{"event": "train_progress", "epoch": 4, "batch": 17500, "batches_per_rank": 18000, "loss": 0.37200302113390454, "sampled_subnets": 6.0, "full_nmse": 0.17474778164848714}
+{"event": "train_progress", "epoch": 4, "batch": 18000, "batches_per_rank": 18000, "loss": 0.37109679691545316, "sampled_subnets": 6.0, "full_nmse": 0.1745452244252106}
+{"event": "train_progress", "epoch": 5, "batch": 500, "batches_per_rank": 18000, "loss": 0.5427966720114153, "sampled_subnets": 6.0, "full_nmse": 0.24623254060496882}
+{"event": "train_progress", "epoch": 5, "batch": 1000, "batches_per_rank": 18000, "loss": 0.5289400373871128, "sampled_subnets": 6.0, "full_nmse": 0.2405302210276323}
+{"event": "train_progress", "epoch": 5, "batch": 1500, "batches_per_rank": 18000, "loss": 0.6020698306047252, "sampled_subnets": 6.0, "full_nmse": 0.2790613075834178}
+{"event": "train_progress", "epoch": 5, "batch": 2000, "batches_per_rank": 18000, "loss": 0.6482115804168082, "sampled_subnets": 6.0, "full_nmse": 0.3045173800966391}
+{"event": "train_progress", "epoch": 5, "batch": 2500, "batches_per_rank": 18000, "loss": 0.6028561655739941, "sampled_subnets": 6.0, "full_nmse": 0.2842723690098771}
+{"event": "train_progress", "epoch": 5, "batch": 3000, "batches_per_rank": 18000, "loss": 0.5125219809135627, "sampled_subnets": 6.0, "full_nmse": 0.2415698907612305}
+{"event": "train_progress", "epoch": 5, "batch": 3500, "batches_per_rank": 18000, "loss": 0.44723950447869465, "sampled_subnets": 6.0, "full_nmse": 0.21078997158924354}
+{"event": "train_progress", "epoch": 5, "batch": 4000, "batches_per_rank": 18000, "loss": 0.39723039193327353, "sampled_subnets": 6.0, "full_nmse": 0.18725964681874033}
+{"event": "train_progress", "epoch": 5, "batch": 4500, "batches_per_rank": 18000, "loss": 0.35812221391361204, "sampled_subnets": 6.0, "full_nmse": 0.16888211593335412}
+{"event": "train_progress", "epoch": 5, "batch": 5000, "batches_per_rank": 18000, "loss": 0.32592810271146533, "sampled_subnets": 6.0, "full_nmse": 0.15379587535243455}
+{"event": "train_progress", "epoch": 5, "batch": 5500, "batches_per_rank": 18000, "loss": 0.299432984631171, "sampled_subnets": 6.0, "full_nmse": 0.14140468051340996}
+{"event": "train_progress", "epoch": 5, "batch": 6000, "batches_per_rank": 18000, "loss": 0.28756936139499684, "sampled_subnets": 6.0, "full_nmse": 0.13577946419030826}
+{"event": "train_progress", "epoch": 5, "batch": 6500, "batches_per_rank": 18000, "loss": 0.27948771664166033, "sampled_subnets": 6.0, "full_nmse": 0.13195009810811817}
+{"event": "train_progress", "epoch": 5, "batch": 7000, "batches_per_rank": 18000, "loss": 0.2849147041863108, "sampled_subnets": 6.0, "full_nmse": 0.13418318863807327}
+{"event": "train_progress", "epoch": 5, "batch": 7500, "batches_per_rank": 18000, "loss": 0.29734643969875363, "sampled_subnets": 6.0, "full_nmse": 0.14011800404861566}
+{"event": "train_progress", "epoch": 5, "batch": 8000, "batches_per_rank": 18000, "loss": 0.30984019685327174, "sampled_subnets": 6.0, "full_nmse": 0.14592746426995518}
+{"event": "train_progress", "epoch": 5, "batch": 8500, "batches_per_rank": 18000, "loss": 0.32626466876421867, "sampled_subnets": 6.0, "full_nmse": 0.1533299759546767}
+{"event": "train_progress", "epoch": 5, "batch": 9000, "batches_per_rank": 18000, "loss": 0.3400016525926562, "sampled_subnets": 6.0, "full_nmse": 0.1594405116803808}
+{"event": "train_progress", "epoch": 5, "batch": 9500, "batches_per_rank": 18000, "loss": 0.34540592441361545, "sampled_subnets": 6.0, "full_nmse": 0.16161972298675742}
+{"event": "train_progress", "epoch": 5, "batch": 10000, "batches_per_rank": 18000, "loss": 0.34959969629875115, "sampled_subnets": 6.0, "full_nmse": 0.16328424279994033}
+{"event": "train_progress", "epoch": 5, "batch": 10500, "batches_per_rank": 18000, "loss": 0.3511964675576558, "sampled_subnets": 6.0, "full_nmse": 0.1641263197554601}
+{"event": "train_progress", "epoch": 5, "batch": 11000, "batches_per_rank": 18000, "loss": 0.3509790893631117, "sampled_subnets": 6.0, "full_nmse": 0.16433062783182795}
+{"event": "train_progress", "epoch": 5, "batch": 11500, "batches_per_rank": 18000, "loss": 0.3496042403395739, "sampled_subnets": 6.0, "full_nmse": 0.16375008538079197}
+{"event": "train_progress", "epoch": 5, "batch": 12000, "batches_per_rank": 18000, "loss": 0.34692213114459747, "sampled_subnets": 6.0, "full_nmse": 0.16244472636323812}
+{"event": "train_progress", "epoch": 5, "batch": 12500, "batches_per_rank": 18000, "loss": 0.3422455459800871, "sampled_subnets": 6.0, "full_nmse": 0.16023603223132565}
+{"event": "train_progress", "epoch": 5, "batch": 13000, "batches_per_rank": 18000, "loss": 0.3318398280124647, "sampled_subnets": 6.0, "full_nmse": 0.15540218661493874}
+{"event": "train_progress", "epoch": 5, "batch": 13500, "batches_per_rank": 18000, "loss": 0.3220750661645057, "sampled_subnets": 6.0, "full_nmse": 0.15088927600560356}
+{"event": "train_progress", "epoch": 5, "batch": 14000, "batches_per_rank": 18000, "loss": 0.3176110342899803, "sampled_subnets": 6.0, "full_nmse": 0.14872017945907984}
+{"event": "train_progress", "epoch": 5, "batch": 14500, "batches_per_rank": 18000, "loss": 0.31303862508412283, "sampled_subnets": 6.0, "full_nmse": 0.14654255787638526}
+{"event": "train_progress", "epoch": 5, "batch": 15000, "batches_per_rank": 18000, "loss": 0.3208811322939916, "sampled_subnets": 6.0, "full_nmse": 0.15061253404393735}
+{"event": "train_progress", "epoch": 5, "batch": 15500, "batches_per_rank": 18000, "loss": 0.33135561735391544, "sampled_subnets": 6.0, "full_nmse": 0.1560548755746852}
+{"event": "train_progress", "epoch": 5, "batch": 16000, "batches_per_rank": 18000, "loss": 0.3420667486562579, "sampled_subnets": 6.0, "full_nmse": 0.16160840386377306}
+{"event": "train_progress", "epoch": 5, "batch": 16500, "batches_per_rank": 18000, "loss": 0.3523399744075237, "sampled_subnets": 6.0, "full_nmse": 0.1669001550547247}
+{"event": "train_progress", "epoch": 5, "batch": 17000, "batches_per_rank": 18000, "loss": 0.3611533450390076, "sampled_subnets": 6.0, "full_nmse": 0.17138787465184596}
+{"event": "train_progress", "epoch": 5, "batch": 17500, "batches_per_rank": 18000, "loss": 0.36620293775562934, "sampled_subnets": 6.0, "full_nmse": 0.17390106644552344}
+{"event": "train_progress", "epoch": 5, "batch": 18000, "batches_per_rank": 18000, "loss": 0.3706167913486998, "sampled_subnets": 6.0, "full_nmse": 0.17609602928209864}
+epoch=1 train_loss=0.430748 train_nmse=0.178493 val_loss=nan val_nmse=nan
+epoch=2 train_loss=0.385914 train_nmse=0.175721 val_loss=nan val_nmse=nan
+epoch=3 train_loss=0.378673 train_nmse=0.175876 val_loss=nan val_nmse=nan
+epoch=4 train_loss=0.371097 train_nmse=0.174545 val_loss=nan val_nmse=nan
+epoch=5 train_loss=0.370617 train_nmse=0.176096 val_loss=0.459947 val_nmse=0.214173
+EXIT_CODE=0

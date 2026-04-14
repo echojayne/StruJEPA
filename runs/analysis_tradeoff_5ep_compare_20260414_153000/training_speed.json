@@ -1,0 +1,16 @@
+{
+  "elapsed_hours": 5.27586366587215,
+  "elapsed_seconds": 18993.10919713974,
+  "seconds_per_epoch": 3798.621839427948,
+  "minutes_per_epoch": 63.3103639904658,
+  "train_samples_per_second_est": 37.9084852578233,
+  "all_samples_per_second_est": 39.59330682483767,
+  "train_batches_per_epoch": 18000,
+  "val_batches_per_epoch": 4000,
+  "epochs": 5.0,
+  "validation_epochs": 1.0,
+  "dataset_count": 16.0,
+  "batch_size": 8,
+  "samples_per_epoch_total_nominal": 176000.0,
+  "run_dir": "/home/users/dky/StruJEPA/runs/wifo_base_strujepa_gpu0_anchor_random_20260412_223720"
+}
