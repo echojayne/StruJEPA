@@ -1,0 +1,43 @@
+model:
+  family: itransformer
+  source_config_path: ${AI_RAN_BENCHMARK_ROOT}/source_snapshots/traffic_forecasting/config/milan_itransformer_train.yaml
+  checkpoint_path: ${AI_RAN_BENCHMARK_ROOT}/benchmarks/traffic_forecasting/itransformer/assets/static_baseline/best.pt
+
+elastic:
+  stack_path: encoder
+  width_multipliers: [1.0, 0.75, 0.5, 0.25, 0.125]
+  depth_multipliers: [1.0, 0.5, 0.25]
+  width_only_epochs: 0
+
+method:
+  supervised_weight: 1.0
+  completion:
+    enabled: true
+    mode: width_operator_completion
+    stage_epochs:
+      warmup_completion: 100
+      subnet_training: 100
+    depth_encoding: gaussian_cdf
+    predictor_layout: matrix_transformer_full
+    predictor_hidden_dim: 256
+    predictor_layers: 1
+    predictor_num_heads: 4
+    gaussian_mu: 0.43460643
+    gaussian_sigma: 0.23173062
+    lambda_weight: 1.0
+    lambda_attn_residual: 0.25
+    lambda_ffn_residual: 0.25
+
+training:
+  output_dir: runs/traffic_forecasting/current_itransformer
+  device: auto
+  batch_size: 64
+  epochs: 200
+  learning_rate: 1.0e-4
+  weight_decay: 0.0
+  lr_gamma: 1.0
+  num_workers: 0
+  train_limit: 0
+  val_limit: 0
+  validate_every: 5
+  seed: 13

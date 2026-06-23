@@ -1,0 +1,67 @@
+{
+  "device": "cuda:0",
+  "repo_dir": "${DINOV3_ROOT}",
+  "data": {
+    "dataset_dir": "${IMAGENET_ROOT}",
+    "image_size": 224,
+    "num_workers": 8,
+    "batch_size": 2
+  },
+  "model": {
+    "backbone_name": "dinov3_vith16plus",
+    "backbone_weight_path": "${DINOV3_HPLUS_WEIGHTS}",
+    "num_classes": 1000
+  },
+  "elastic": {
+    "stack_path": "backbone.blocks",
+    "block_family": "dinov3_vit",
+    "width_multipliers": [1.0, 0.5, 0.125],
+    "depth_multipliers": [1.0, 0.5, 0.333333, 0.166667],
+    "width_only_epochs": 0
+  },
+  "method": {
+    "supervised_weight": 1.0,
+    "completion": {
+      "enabled": true,
+      "mode": "width_operator_completion",
+      "stage_epochs": {
+        "warmup_completion": 1,
+        "subnet_training": 4
+      },
+      "depth_encoding": "gaussian_cdf",
+      "gaussian_mu": 0.37790416,
+      "gaussian_sigma": 0.2029252,
+      "lambda_weight": 1.0,
+      "lambda_attn_residual": 0.25,
+      "lambda_ffn_residual": 0.25,
+      "predictor_hidden_dim": 256,
+      "predictor_layers": 1,
+      "predictor_num_heads": 4,
+      "predictor_layout": "matrix_transformer_full"
+    }
+  },
+  "train": {
+    "epochs": 5,
+    "seed": 42,
+    "param_dtype": "bf16",
+    "finetune_backbone": false,
+    "backbone_lr_scale": 0.0,
+    "label_smoothing": 0.1,
+    "grad_clip_norm": 1.0,
+    "amp_dtype": "bf16",
+    "eval_interval": 5,
+    "save_interval": 1,
+    "log_every_batches": 200,
+    "out_dir": "runs/dinov3_imagenet/current"
+  },
+  "optim": {
+    "name": "adamw",
+    "lr": 0.001,
+    "completion_lr": 0.001,
+    "weight_decay": 0.05,
+    "completion_weight_decay": 0.0001,
+    "betas": [0.9, 0.95],
+    "warmup_epochs": 1,
+    "sched": "cosine"
+  }
+}

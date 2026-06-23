@@ -1,0 +1,47 @@
+data_config: ${AI_RAN_BENCHMARK_ROOT}/source_snapshots/channel_estimation/config/adafortitran_reference_benchmark.yaml
+
+model:
+  family: adafortitran
+  variant: paper_strict
+  config_path: ${AI_RAN_BENCHMARK_ROOT}/source_snapshots/channel_estimation/config/adafortitran_paper_strict_repro_train.yaml
+  checkpoint_path: ${AI_RAN_BENCHMARK_ROOT}/benchmarks/channel_estimation/adafortitran/assets/official_public_final/best.pt
+
+elastic:
+  stack_path: transformer_encoder.layers
+  width_multipliers: [1.0, 0.75, 0.5, 0.25, 0.125]
+  depth_multipliers: [1.0, 0.5, 0.333333, 0.166667]
+  width_only_epochs: 0
+
+method:
+  supervised_weight: 1.0
+  completion:
+    enabled: true
+    mode: width_operator_completion
+    stage_epochs:
+      warmup_completion: 100
+      subnet_training: 100
+    depth_encoding: gaussian_cdf
+    predictor_layout: matrix_transformer_full
+    predictor_hidden_dim: 128
+    predictor_layers: 1
+    predictor_num_heads: 4
+    gaussian_mu: 0.5054656177183868
+    gaussian_sigma: 0.1883553716886
+    lambda_weight: 1.0
+    lambda_attn_residual: 0.25
+    lambda_ffn_residual: 0.25
+
+training:
+  output_dir: runs/channel_estimation/current_adafortitran
+  device: auto
+  batch_size: 128
+  epochs: 200
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-4
+  lr_gamma: 0.998
+  num_workers: 0
+  train_limit: 0
+  val_limit: 0
+  normalize_inputs: false
+  validate_every: 5
+  seed: 13

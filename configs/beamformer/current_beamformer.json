@@ -1,0 +1,70 @@
+{
+  "model": {
+    "source_root": "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer/source",
+    "weight_root": "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer/assets/original_weights/final"
+  },
+  "data": {
+    "csi_root": "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer/assets/csi-dataset/homeoffice-communication-28G-csi",
+    "train_split": "t16x16_r2x1_train",
+    "val_split": "t16x16_r2x1_test_small"
+  },
+  "elastic": {
+    "width_multipliers": [1.0, 0.5, 0.25],
+    "depth_multipliers": [1.0, 0.5, 0.25]
+  },
+  "method": {
+    "supervised_weight": 1.0,
+    "completion": {
+      "enabled": true,
+      "mode": "width_operator_completion",
+      "stage_epochs": {
+        "warmup_completion": 1,
+        "subnet_training": 2
+      },
+      "depth_encoding": "gaussian_cdf",
+      "gaussian_mu": 0.5,
+      "gaussian_sigma": 0.25,
+      "lambda_weight": 0.05,
+      "lambda_attn_residual": 0.05,
+      "lambda_ffn_residual": 0.05,
+      "predictor_hidden_dim": 64,
+      "predictor_layers": 1,
+      "predictor_num_heads": 4,
+      "predictor_layout": "matrix_transformer_full",
+      "max_tokens_per_completion": 512
+    },
+    "stage_convergence": {
+      "enabled": true,
+      "restore_best": true,
+      "require_converged": true,
+      "completion_warmup": {
+        "metric": "val_loss",
+        "min_epochs": 5,
+        "max_epochs": 25,
+        "patience": 3,
+        "min_delta": 0.00001,
+        "target_metric_value": 0.001
+      },
+      "subnet_training": {
+        "metric": "val_task_loss",
+        "min_epochs": 3,
+        "max_epochs": 40,
+        "patience": 4,
+        "min_delta": 0.00001
+      }
+    }
+  },
+  "training": {
+    "output_dir": "runs/beamformer/current_strujepa",
+    "device": "auto",
+    "batch_size": 2,
+    "epochs": 3,
+    "learning_rate": 1e-5,
+    "weight_decay": 1e-4,
+    "num_workers": 0,
+    "train_limit": 1000,
+    "val_limit": 1000,
+    "log_every_batches": 50,
+    "seed": 13
+  }
+}
