@@ -33,10 +33,21 @@ method directory.
 ```bash
 python -m pip install -e ".[dev]"
 export AI_RAN_BENCHMARK_ROOT=/path/to/ai_ran_benchmarks
+export STRUJEPA_RAN_RUN_ROOT=/path/to/strujepa_ran_runs
 ```
 
 Additional task-specific dependencies are available through the `wifo`,
 `channel`, `traffic`, and `dinov3` extras.
+
+## Run Outputs
+
+The maintained launch scripts keep benchmark outputs outside this source tree.
+Relative output paths beginning with `runs/` are resolved under
+`${STRUJEPA_RAN_RUN_ROOT}`. If the variable is unset, the fallback is an
+adjacent `../strujepa_ran_runs` workspace rather than this repository.
+
+Use that external workspace for resolved configs, logs, checkpoints, evaluator
+outputs, and paper-facing result tables.
 
 ## Current Training Entrypoints
 

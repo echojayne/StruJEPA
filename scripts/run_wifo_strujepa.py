@@ -20,6 +20,7 @@ from integrations.wifo.benchmark_paths import resolve_wifo_benchmark_paths
 WIFO_PATHS = resolve_wifo_benchmark_paths()
 
 from elastic_method import MethodConfig
+from elastic_method.run_paths import resolve_run_output_path
 
 
 def _parse_bool(value: str) -> bool:
@@ -61,7 +62,7 @@ def create_argparser():
         val_data_root=str(WIFO_PATHS.train_val_data),
         train_split="train",
         val_split="val",
-        save_dir=str(ROOT / "runs" / "strujepa_wifo_base"),
+        save_dir="runs/wifo/strujepa_wifo_base",
         num_workers=4,
         seed=100,
         epochs=10,
@@ -118,7 +119,7 @@ def create_argparser():
     )
     known, _ = config_parser.parse_known_args()
     if known.config.is_file():
-        payload = json.loads(known.config.read_text(encoding="utf-8"))
+        payload = json.loads(os.path.expandvars(known.config.read_text(encoding="utf-8")))
         unknown = sorted(set(payload) - set(defaults))
         if unknown:
             raise ValueError(f"unknown WiFo config keys: {unknown}")
@@ -294,7 +295,7 @@ def main():
     if abs(lr_gamma - 1.0) > 1e-12:
         scheduler = torch.optim.lr_scheduler.ExponentialLR(trainer.optimizer, gamma=lr_gamma)
 
-    save_dir = Path(args.save_dir)
+    save_dir = resolve_run_output_path(args.save_dir, ROOT)
     save_dir.mkdir(parents=True, exist_ok=True)
 
     history: list[dict[str, float]] = []

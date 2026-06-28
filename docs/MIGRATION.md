@@ -34,11 +34,13 @@ training.
   of the core method directory.
 - Current configurations use `configs/**/current_*`.
 - External benchmark assets are resolved through `AI_RAN_BENCHMARK_ROOT`.
+- Relative output paths beginning with `runs/` are resolved outside the source
+  tree under `STRUJEPA_RAN_RUN_ROOT`.
 
 ## Non-Core Assets
 
 - Git metadata, runtime outputs, result figures, portable deliverables,
   checkpoints, raw logs, cases, OAI assets, and historical experiment
   directories are kept outside `/home/users/dky/StruJEPA`.
-- Use external benchmark and experiment roots for data, baselines, and
-  reproducibility evidence.
+- Use external benchmark, baseline, and StruJEPA run roots for data, baselines,
+  and reproducibility evidence.

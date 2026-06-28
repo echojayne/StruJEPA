@@ -19,6 +19,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from elastic_method import StruJEPATrainer, ElasticizationSpec, MethodConfig  # noqa: E402
+from elastic_method.run_paths import resolve_run_output_path  # noqa: E402
 from integrations.channel_estimation.strujepa import (  # noqa: E402
     ADA_DATA_CONFIG,
     ADA_PAPER_STRICT_CONFIG,
@@ -181,7 +182,7 @@ def main() -> int:
 
     set_seed(int(training_cfg.get("seed", 13)))
     device = resolve_device(str(training_cfg.get("device", "auto")))
-    output_dir = Path(training_cfg["output_dir"]).expanduser()
+    output_dir = resolve_run_output_path(training_cfg["output_dir"], ROOT)
     output_dir.mkdir(parents=True, exist_ok=True)
     save_json(output_dir / "resolved_config.json", config)
 

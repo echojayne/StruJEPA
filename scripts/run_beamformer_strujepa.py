@@ -19,6 +19,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from elastic_method import MethodConfig, StruJEPATrainer
+from elastic_method.run_paths import resolve_run_output_path
 from integrations.beamformer.strujepa import (
     BeamFormerTaskAdapter,
     build_loaders,
@@ -44,7 +45,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_config(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(os.path.expandvars(path.read_text(encoding="utf-8")))
 
 
 def set_seed(seed: int) -> None:
@@ -86,7 +87,7 @@ def main() -> None:
 
     set_seed(int(training.get("seed", 13)))
     device = resolve_device(str(training.get("device", "auto")))
-    output_dir = Path(training["output_dir"])
+    output_dir = resolve_run_output_path(training["output_dir"], ROOT)
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "resolved_config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
 

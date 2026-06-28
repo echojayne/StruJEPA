@@ -18,6 +18,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from elastic_method import ElasticizationSpec, MethodConfig, elasticize_model
+from elastic_method.run_paths import resolve_run_output_path
 from integrations.dinov3_imagenet.data import build_imagenet_loaders
 from integrations.dinov3_imagenet.modeling import DINOv3ImageNetClassifier, build_linear_head, load_dinov3_backbone
 from integrations.dinov3_imagenet.task import ImageNetClassificationTaskAdapter
@@ -104,7 +105,7 @@ def main() -> None:
     data_cfg = config["data"]
 
     setup_seed(int(train_cfg.get("seed", 42)))
-    out_dir = (args.output_dir or Path(train_cfg["out_dir"])).expanduser().resolve()
+    out_dir = resolve_run_output_path(args.output_dir or train_cfg["out_dir"], ROOT).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
     print(f"[INIT] device={device} out_dir={out_dir}", flush=True)
 

@@ -17,19 +17,24 @@ from elastic_method import ElasticizationSpec, elasticize_model
 from elastic_method.core.structures import ForwardResult
 
 
+AI_RAN_BENCHMARK_ROOT = Path(
+    os.environ.get("AI_RAN_BENCHMARK_ROOT", Path.home() / "ai_ran_benchmarks")
+).expanduser()
 BENCHMARK_ROOT = Path(
-    os.environ.get(
-        "BEAMFORMER_BENCHMARK_ROOT",
-        "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer",
+    os.path.expandvars(
+        os.environ.get(
+            "BEAMFORMER_BENCHMARK_ROOT",
+            str(AI_RAN_BENCHMARK_ROOT / "benchmarks/beam_management/beamformer"),
+        )
     )
-)
-SOURCE_ROOT = Path(os.environ.get("BEAMFORMER_SOURCE_ROOT", BENCHMARK_ROOT / "source"))
+).expanduser()
+SOURCE_ROOT = Path(os.path.expandvars(os.environ.get("BEAMFORMER_SOURCE_ROOT", str(BENCHMARK_ROOT / "source"))))
 DEFAULT_CSI_ROOT = BENCHMARK_ROOT / "assets" / "csi-dataset" / "homeoffice-communication-28G-csi"
 DEFAULT_WEIGHT_ROOT = BENCHMARK_ROOT / "assets" / "original_weights" / "final"
 
 
 def ensure_beamformer_source(path: str | Path = SOURCE_ROOT) -> Path:
-    source = Path(path)
+    source = Path(os.path.expandvars(str(path))).expanduser()
     if not (source / "beamformer").is_dir():
         raise FileNotFoundError(f"BeamFormer source not found: {source}")
     text = str(source)
@@ -47,8 +52,8 @@ def build_setting(
     ensure_beamformer_source(source_root)
     from configs.submodules import ARN_model, assumption, dataset, estimator, generator
 
-    csi_root = Path(csi_root)
-    weight_root = Path(weight_root)
+    csi_root = Path(os.path.expandvars(str(csi_root))).expanduser()
+    weight_root = Path(os.path.expandvars(str(weight_root))).expanduser()
     ds = dataset.homeoffice_communication_28g()
     ds.train_data_path = str(csi_root / "t16x16_r2x1_train")
     ds.test_data_path = str(csi_root / "t16x16_r2x1_test_small")

@@ -1,10 +1,10 @@
 {
   "model": {
-    "source_root": "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer/source",
-    "weight_root": "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer/assets/original_weights/final"
+    "source_root": "${AI_RAN_BENCHMARK_ROOT}/benchmarks/beam_management/beamformer/source",
+    "weight_root": "${AI_RAN_BENCHMARK_ROOT}/benchmarks/beam_management/beamformer/assets/original_weights/final"
   },
   "data": {
-    "csi_root": "/mnt/dky/ai_ran_benchmarks/benchmarks/beam_management/beamformer/assets/csi-dataset/homeoffice-communication-28G-csi",
+    "csi_root": "${AI_RAN_BENCHMARK_ROOT}/benchmarks/beam_management/beamformer/assets/csi-dataset/homeoffice-communication-28G-csi",
     "train_split": "t16x16_r2x1_train",
     "val_split": "t16x16_r2x1_test_small"
   },
